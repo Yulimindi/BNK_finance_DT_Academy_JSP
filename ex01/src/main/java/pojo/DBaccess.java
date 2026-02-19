@@ -63,7 +63,21 @@ public class DBaccess {
 			return false;
 		}
 		
-
+	}
+	
+	public boolean login2(String id, String pw) throws Exception {
+		
+		pstmt = con.prepareStatement("select * from myprogram where id = ? and pw = ?");
+		pstmt.setString(1, id);
+		pstmt.setString(2, pw);
+		rs = pstmt.executeQuery();
+		
+		if(rs.next()) {
+			return true;
+		} else {
+			return false;
+		}
+		
 	}
 	
 	public boolean set(String id, String pw, String name) throws Exception {

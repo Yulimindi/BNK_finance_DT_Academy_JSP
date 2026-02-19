@@ -20,8 +20,6 @@
 		if(db.set(SaveInfo.id, pw, name)) {
 			response.sendRedirect("mypage.jsp");
 		}
-		
-		
 	%>
 </body>
 </html>
