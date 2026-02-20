@@ -54,6 +54,8 @@
 	
 	</div>
 	
+	<button class="button">눌러봐</button>
+	
 	<script>
 		const urlParams = new URLSearchParams(window.location.search);
 		const result = urlParams.get('result');
@@ -61,6 +63,12 @@
 		if(result == 'false') {
 			alert("아이디 또는 패스워드가 틀렸습니다!");
 		}
+		
+		const btn = document.querySelector('.button');
+		
+		btn.addEventListener("click", () => {
+			window.location.href = "mypage.jsp";
+		})
 	
 	</script>
 </body>

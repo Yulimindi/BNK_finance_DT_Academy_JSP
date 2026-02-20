@@ -11,7 +11,6 @@ public class DBaccess {
 	String uid = "newgreen";
 	String upw = "1234";
 	boolean result;
-	
 	private Connection con;
 	private PreparedStatement pstmt;
 	private ResultSet rs;

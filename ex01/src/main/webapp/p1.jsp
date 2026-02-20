@@ -5,7 +5,6 @@
 	request.setAttribute("name", "Ann");
 	// session.setAttribute("name", "Khan");
 	// application.setAttribute("name", "David");
-	
 	request.getRequestDispatcher("p2.jsp").forward(request, response);
 %>
 <!DOCTYPE html>
@@ -17,7 +16,7 @@
 <body>
 	<h1>p1</h1>
 	<hr>
-	name: ${name }
+		name: ${name }
 	<hr>
 	<a href="p2.jsp">Go p2!</a>
 </body>

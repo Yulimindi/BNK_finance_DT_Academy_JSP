@@ -9,7 +9,7 @@
 <body>
 	<h1>p2</h1>
 	<hr>
-	name: ${name }
+		name: ${name }
 	<br>
 </body>
 </html>
