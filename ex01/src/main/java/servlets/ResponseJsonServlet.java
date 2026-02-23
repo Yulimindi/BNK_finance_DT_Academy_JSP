@@ -5,6 +5,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import pojo.JsonUser;
 import pojo.User;
 import tools.jackson.databind.ObjectMapper;
 
@@ -39,8 +40,24 @@ public class ResponseJsonServlet extends HttpServlet {
 
 		ObjectMapper mapper = new ObjectMapper();
 		// 값을 문자열로 바꿔주는 메서드
-		String json = mapper.writeValueAsString(user);
-		out.print(json);
+//		String json = mapper.writeValueAsString(user);
+//		out.print(json);
+		
+		
+		JsonUser jUser = mapper.readValue(request.getReader(), JsonUser.class); // 요청으로 온 데이터를 읽어서 JsonUser의 class에 넣어라
+		
+		response.setContentType("application/json; charset=UTF-8");
+		
+		System.out.println(jUser);
+		
+//		PrintWriter out = response.getWriter();
+		
+		int result = 1;
+		
+		if(result == 1) {
+//			out.print(jUser);
+			mapper.writeValue(out, jUser);
+		}
 	}
 
 
